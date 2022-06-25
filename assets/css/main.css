@@ -182,6 +182,11 @@ input {
   -moz-appearance: none;
 }
 
+.section-cover {
+  margin-top: -80px;
+  padding-top: 80px;
+}
+
 /* common css end */
 /* page loader css start  */
 
@@ -414,6 +419,7 @@ input {
 
 .search {
   margin-bottom: 45px;
+  z-index: 2;
 }
 
 .search button.btn {
@@ -1196,6 +1202,10 @@ input {
   color: #007EF2;
 }
 
+.slick-arrow.slick-disabled {
+  display: none !important;
+}
+
 .arw-design .slick-arrow {
   position: absolute;
   right: 0;
@@ -1251,9 +1261,6 @@ input {
 }
 
 .right-overlay::before {
-  background: linear-gradient(96.26deg, rgba(255, 243, 243, 0) 18.6%, #FFFFFF 61.45%, rgba(255, 255, 255, 0.42) 61.45%, #FFFFFF 61.45%);
-
-  transform: rotate(-180deg);
   content: "";
   height: 100%;
   content: "";
@@ -1263,6 +1270,8 @@ input {
   display: block;
   position: absolute;
   left: -12px;
+  background: linear-gradient(96.26deg, rgba(255, 243, 243, 0) 18.6%, #FFFFFF 61.45%, rgba(255, 255, 255, 0.42) 61.45%, #FFFFFF 61.45%);
+  transform: rotate(-180deg);
 }
 
 .cat-btn.yellow-bg {
@@ -1279,6 +1288,30 @@ input {
 
 
 /* step-area css start */
+.step-area {
+  transition: .4s;
+}
+
+.step-area::after {
+  background: linear-gradient(94.38deg, #008CE4 -1.08%, #00AF9E 96.88%);
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: .4s;
+  z-index: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.change-bg .step-area::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 .step-content .num {
   font-family: 'Poppins';
   font-style: normal;
@@ -1310,7 +1343,7 @@ input {
   max-width: 510px;
   display: flex;
   flex-direction: column;
-  min-height: 555px;
+  min-height: 445px;
   justify-content: center;
 }
 
@@ -1324,7 +1357,7 @@ input {
 
 .step-area {
   padding-top: 80px;
-  padding-bottom: 0px;
+  padding-bottom: 30px;
 }
 
 .st-1 {
@@ -1336,8 +1369,12 @@ input {
   top: calc(100% - 7px);
 }
 
-.step-content-outer-box .step-content:not(:last-child) {
+.step-content-outer-box .step-content {
   margin-bottom: 410px;
+}
+
+.step-content-outer-box .step-content:last-child {
+  margin-bottom: 200px;
 }
 
 .step-g-wrapper {
@@ -1348,6 +1385,13 @@ input {
 
 .step-img img {
   max-height: 570px;
+  transition: .3s;
+  max-width: 400px;
+}
+
+.change-bg #step-2 p,
+.change-bg #step-2.step-content .num {
+  color: #fff;
 }
 
 /* step-area css end */
@@ -2369,6 +2413,45 @@ input {
 .back-to-top:hover {
   color: #fff;
   background-position: 0 34px;
+}
+
+.floating-nav {
+  position: fixed;
+  top: 50%;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  transform: translateY(-50%) rotateY(90deg);
+  transition: .3s;
+  left: 0
+}
+
+.floating-nav.show {
+  transform: translateY(-50%) rotateX(0deg);
+}
+
+.floating-nav a {
+  /* background: #000; */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: .3s;
+  background: linear-gradient(94.38deg, #008CE4 -1.08%, #00AF9E 96.88%);
+}
+
+.floating-nav a i {
+  font-size: 14px;
+}
+
+.floating-nav li:not(:last-child) a {
+  margin-bottom: 6px;
 }
 
 /* extra css end */
