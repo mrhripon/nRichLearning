@@ -22,7 +22,7 @@ $(document).ready(function () {
 
 
     // one page floating nav activation 
-    $('#floating-nav').onePageNav()
+    $('.float-nav-list').onePageNav()
 
 
     // Slick Activation for Course-area 
@@ -66,7 +66,7 @@ $(document).ready(function () {
     $('.educator-active').slick({
         infinite: false,
         speed: 800,
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
         centermode: true,
         nextArrow: '<button type="button" class="slick-next"><i class="far fa-angle-right"></i></button>',
@@ -133,6 +133,20 @@ $(document).ready(function () {
         ]
     });
 
+    // Slick Activation for institue-area
+    $('.institue-slider').slick({
+        infinite: true,
+        speed: 800,
+        slidesToShow: 1,
+        fade: true,
+        autoplay: true,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplaySpeed: 1600,
+        // nextArrow: '<button type="button" class="slick-next"><i class="fal fa-chevron-circle-right"></i></button>',
+        // prevArrow: '<button type="button" class="slick-prev"><i class="fal fa-chevron-circle-left"></i></button>'
+    });
+
 
     // Slick Activation for expert-area
     $('.expert-slider').slick({
@@ -168,12 +182,6 @@ $(document).ready(function () {
             if (each.isIntersecting) {
                 let src = each.target.getAttribute('data-step');
                 changeAbleImage.src = src;
-                console.log(each.target.id)
-                if (each.target.id === 'step-2') {
-                    $(stepArea).addClass('change-bg')
-                } else {
-                    $(stepArea).removeClass('change-bg')
-                }
             }
 
         })
@@ -184,6 +192,102 @@ $(document).ready(function () {
     stepContent.forEach(each => {
         observer.observe(each)
     });
+
+
+    // Query for Dragable Hamburger Menu 
+    const fabElement = document.getElementById("floating-snap-btn-wrapper");
+    const burger = document.querySelector('.js-burger');
+    let oldPositionX,
+        oldPositionY;
+
+    const move = (e) => {
+        if (!fabElement.classList.contains("fab-active")) {
+            if (e.type === "touchmove") {
+                fabElement.style.top = e.touches[0].clientY + "px";
+                fabElement.style.left = e.touches[0].clientX + "px";
+            } else {
+                fabElement.style.top = e.clientY + "px";
+                fabElement.style.left = e.clientX + "px";
+            }
+        }
+    };
+    const mouseDown = (e) => {
+        console.log("mouse down ");
+        oldPositionY = fabElement.style.top;
+        oldPositionX = fabElement.style.left;
+        if (e.type === "mousedown") {
+            window.addEventListener("mousemove", move);
+        } else {
+            window.addEventListener("touchmove", move);
+        }
+
+        fabElement.style.transition = "none";
+    };
+
+    const mouseUp = (e) => {
+        console.log("mouse up");
+        if (e.type === "mouseup") {
+            window.removeEventListener("mousemove", move);
+        } else {
+            window.removeEventListener("touchmove", move);
+        }
+        snapToSide(e);
+        fabElement.style.transition = "0.3s ease-in-out left";
+    };
+
+    const snapToSide = (e) => {
+        const wrapperElement = document.getElementById('main-wrapper');
+        const windowWidth = window.innerWidth;
+        let currPositionX, currPositionY;
+        if (e.type === "touchend") {
+            currPositionX = e.changedTouches[0].clientX;
+            currPositionY = e.changedTouches[0].clientY;
+        } else {
+            currPositionX = e.clientX;
+            currPositionY = e.clientY;
+        }
+        if (currPositionY < 50) {
+            fabElement.style.top = 50 + "px";
+        }
+        if (currPositionY > wrapperElement.clientHeight - 50) {
+            fabElement.style.top = (wrapperElement.clientHeight - 50) + "px";
+        }
+        if (currPositionX < windowWidth / 2) {
+            fabElement.style.left = 40 + "px";
+            fabElement.classList.remove('right');
+            fabElement.classList.add('left');
+        } else {
+            fabElement.style.left = windowWidth - 60 + "px";
+            fabElement.classList.remove('left');
+            fabElement.classList.add('right');
+        }
+    };
+
+    fabElement.addEventListener("mousedown", mouseDown);
+
+    fabElement.addEventListener("mouseup", mouseUp);
+
+    fabElement.addEventListener("touchstart", mouseDown);
+
+    fabElement.addEventListener("touchend", mouseUp);
+    fabElement.addEventListener("click", (e) => {
+        if (
+            oldPositionY === fabElement.style.top &&
+            oldPositionX === fabElement.style.left
+        ) {
+            burger.classList.toggle('open');
+            fabElement.classList.toggle("fab-active");
+        }
+    });
+
+    $(window).on('load', function () {
+        fabElement.style.top = '60%';
+        fabElement.style.left = '40px';
+    });
+
+
+
+
 
     //   Query For scroll back to top 
     var back = $('.back-to-top');
