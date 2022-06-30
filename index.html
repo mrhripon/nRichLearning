@@ -251,7 +251,7 @@
                                         <img src="assets/img/st-3.png" alt="">
                                         <img src="assets/img/st-4.png" alt="">
                                     </div>
-                                    <p><strong class="g-color-one">4,287+ Active</strong> Tutors & Learners!</p>
+                                    <p><strong class="text-gradient">4,287+ Active</strong> Tutors & Learners!</p>
                                 </div>
                             </div> <!-- ./hero-left-wrapper -->
 
@@ -295,7 +295,7 @@
                         <div class="action h-100 w-100">
                             <a href="#"
                                 class="btn btn-medium_round d-flex align-items-center justify-content-center text-uppercase h-100 w-100"><span
-                                    class="g-color-one">BOOK
+                                    class="text-gradient">BOOK
                                     NOW</span></a>
                         </div>
                     </div>
@@ -1246,8 +1246,8 @@
                                                 aspirants, the academy as an instrument assists them in acclimatizing
                                                 their potentialities through systematic study coursework and guidance.
                                             </p>
-                                            <a href="#" class="btn box-btn"><span><svg width="13" height="15"
-                                                        viewBox="0 0 13 15" fill="none"
+                                            <a href="#" class="btn box-btn gradient-bg"><span><svg width="13"
+                                                        height="15" viewBox="0 0 13 15" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
                                                         <path
                                                             d="M6.16617 12.1667C6.16617 12.9 6.36617 13.58 6.70617 14.1667H1.4995C0.759502 14.1667 0.166168 13.5733 0.166168 12.8333V2.16668C0.166168 1.81305 0.306644 1.47392 0.556692 1.22387C0.806741 0.973819 1.14588 0.833344 1.4995 0.833344H2.16617V5.50001L3.83283 4.50001L5.4995 5.50001V0.833344H9.4995C9.85312 0.833344 10.1923 0.973819 10.4423 1.22387C10.6924 1.47392 10.8328 1.81305 10.8328 2.16668V8.22668C10.6128 8.19334 10.3928 8.16668 10.1662 8.16668C7.9595 8.16668 6.16617 9.96001 6.16617 12.1667ZM12.8328 12.1667L10.8328 10.1667V11.5H8.16617V12.8333H10.8328V14.1667L12.8328 12.1667Z"
@@ -1264,7 +1264,7 @@
                             <a href="#" class="link_w_icon">View All Tutors<i class="far fa-arrow-right"></i></a>
                         </div>
                         <div class="minus-margin">
-                            <div class="institue-active adjust-margin-2 right-overlay type-2 arw-design">
+                            <div class="institue-active gap-35 slider_shadow two arw-design">
                                 <div class="course-item">
                                     <div class="cmn-wrap institue">
                                         <div class="top-zone">
@@ -1446,7 +1446,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div> <!-- ./institute-area -->
@@ -1896,8 +1895,6 @@
                 </div>
             </div>
         </footer>
-
-        <a href="#" class="back-to-top"><i class="fal fa-angle-up"></i></a>
     </div>
 
     <!-- Jquery Js  -->
@@ -1917,10 +1914,16 @@
     <script src="assets/js/theia-sticky-sidebar.min.js"></script>
 
     <script>
+        function getSmallDevice() {
+            console.log()
+            return window.matchMedia('(max-width: 767px)').matches;
+        }
+
+
         function detectDevice() {
             let stickyElmentHeight = 0, margin = 0, viewPort = 0;
-            let mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
-            if (!mobile) {
+            let isSmallDevice = getSmallDevice();
+            if (!isSmallDevice) {
                 $('.step-g-wrapper').removeClass('regular-state');
                 viewPort = parseInt((window.innerHeight) / 2)
                 stickyElmentHeight = parseInt(document.getElementById('sticky-el').offsetHeight / 2);
@@ -1932,8 +1935,7 @@
             } else {
                 viewPort = parseInt((window.innerHeight))
                 stickyElmentHeight = parseInt(document.getElementById('sticky-el').offsetHeight);
-                margin = viewPort - stickyElmentHeight;
-                console.log(viewPort, stickyElmentHeight, margin)
+                margin = (viewPort - stickyElmentHeight) - 56;
                 $('.step-g-wrapper').addClass('regular-state');
                 $('.sidebar').css('top', margin);
             }

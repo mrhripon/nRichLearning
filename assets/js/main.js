@@ -310,34 +310,6 @@ $(document).ready(function () {
         autoplay: true,
         vertical: true
     });
-
-
-
-
-
-
-
-
-    //   Query For scroll back to top 
-    var back = $('.back-to-top');
-    back.on('click', function (event) {
-        event.preventDefault();
-        $('html, body').animate({
-            scrollTop: 0,
-        }, 900);
-    })
-    $(window).on('scroll', function (event) {
-        event.preventDefault();
-        var self = $(this),
-            height = self.height(),
-            top = self.scrollTop();
-        if (top > height) {
-            back.addClass('visible');
-        } else {
-            back.removeClass('visible');
-        }
-    })
-
 }); //jQuery End 
 
 
