@@ -140,17 +140,6 @@
         padding-left: 15px;
         padding-right: 15px;
     }
-
-    .cmn-wrap.educator {
-        margin: 0 20px;
-    }
-
-    .educator-active.adjust-margin-2 {
-        margin-left: -20px;
-        margin-right: -20px;
-    }
-
-
 }
 
 @media screen and (max-width: 991px) {
@@ -523,11 +512,6 @@
     .educator-active .slick-list.draggable,
     .institue-active .slick-list.draggable {
         padding-right: 80px !important;
-    }
-
-
-    .cmn-wrap {
-        margin: 0 10px;
     }
 
     .edu-left {
