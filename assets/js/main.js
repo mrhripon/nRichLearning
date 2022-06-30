@@ -24,6 +24,9 @@ $(document).ready(function () {
     // one page floating nav activation 
     $('.float-nav-list').onePageNav()
 
+    $('.course-active, .educator-active, .institue-active').on('init', function (slick) {
+        slick.target.classList.add('right_shadow_active');
+    })
 
     // Slick Activation for Course-area 
     $('.course-active').slick({
@@ -164,34 +167,7 @@ $(document).ready(function () {
     $('.selection').niceSelect();
 
 
-    // Query For make sticky mobile image in step-area 
-    let viewPort = parseInt((window.innerHeight) / 2);
-    let stickyElmentHeight = parseInt(document.getElementById('sticky-el').offsetHeight / 2);
-    let margin = viewPort - stickyElmentHeight;
-    $('.content, .sidebar').theiaStickySidebar({
-        additionalMarginTop: margin
-    });
 
-
-    // Query for step-content observing 
-    const stepArea = document.getElementById('step-area');
-    const stepContent = document.querySelectorAll('.step-content');
-    const changeAbleImage = document.querySelector('.step-img img');
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(each => {
-            if (each.isIntersecting) {
-                let src = each.target.getAttribute('data-step');
-                changeAbleImage.src = src;
-            }
-
-        })
-
-    }, {
-        threshold: 1
-    })
-    stepContent.forEach(each => {
-        observer.observe(each)
-    });
 
 
     // Query for Dragable Hamburger Menu 
@@ -199,6 +175,29 @@ $(document).ready(function () {
     const burger = document.querySelector('.js-burger');
     let oldPositionX,
         oldPositionY;
+
+    const determinePopupPosition = e => {
+
+        let dropDiv = fabElement.querySelector('.float-nav-list-wrap').getBoundingClientRect();
+        let triggerPosition = fabElement.querySelector('.fab-btn').getBoundingClientRect();
+        console.log(dropDiv.height)
+        console.log(triggerPosition.top)
+        if (triggerPosition.top < dropDiv.height) {
+            $(fabElement.querySelector('.float-nav-list-wrap')).css({
+                'bottom': 'auto',
+                'top': 'calc(100% + 5px)'
+            })
+            // $(fabElement.querySelector('.float-nav-list-wrap')).addClass('show-down');
+        } else if ((window.innerHeight - triggerPosition.bottom) < dropDiv.height) {
+            $(fabElement.querySelector('.float-nav-list-wrap')).css({
+                'top': 'auto',
+                'bottom': 'calc(100% + 5px)'
+            })
+            // $(fabElement.querySelector('.float-nav-list-wrap')).addClass('show-down');
+        }
+    }
+
+
 
     const move = (e) => {
         if (!fabElement.classList.contains("fab-active")) {
@@ -212,7 +211,6 @@ $(document).ready(function () {
         }
     };
     const mouseDown = (e) => {
-        console.log("mouse down ");
         oldPositionY = fabElement.style.top;
         oldPositionX = fabElement.style.left;
         if (e.type === "mousedown") {
@@ -225,7 +223,6 @@ $(document).ready(function () {
     };
 
     const mouseUp = (e) => {
-        console.log("mouse up");
         if (e.type === "mouseup") {
             window.removeEventListener("mousemove", move);
         } else {
@@ -236,6 +233,7 @@ $(document).ready(function () {
     };
 
     const snapToSide = (e) => {
+
         const wrapperElement = document.getElementById('main-wrapper');
         const windowWidth = window.innerWidth;
         let currPositionX, currPositionY;
@@ -271,6 +269,7 @@ $(document).ready(function () {
 
     fabElement.addEventListener("touchend", mouseUp);
     fabElement.addEventListener("click", (e) => {
+        determinePopupPosition()
         if (
             oldPositionY === fabElement.style.top &&
             oldPositionX === fabElement.style.left
@@ -284,6 +283,36 @@ $(document).ready(function () {
         fabElement.style.top = '60%';
         fabElement.style.left = '40px';
     });
+
+
+
+
+    // Slick Activation for institue-area
+    $('.review-active').slick({
+        infinite: false,
+        speed: 800,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        vertical: true,
+        nextArrow: '<button type="button" class="slick-next"><i class="far fa-angle-down"></i></button>',
+        prevArrow: '<button type="button" class="slick-prev"><i class="far fa-angle-up"></i></button>'
+    });
+
+
+    // Slick Activation for expert-area
+    $('.expert-slider-2').slick({
+        infinite: true,
+        speed: 800,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplaySpeed: 2000,
+        arrows: false,
+        autoplay: true,
+        vertical: true
+    });
+
+
+
 
 
 

@@ -44,7 +44,7 @@
 <body>
 
     <div class="all" id="main-wrapper">
-        <div id="floating-snap-btn-wrapper">
+        <div id="floating-snap-btn-wrapper" class="d-none d-md-block">
             <div class="fab-btn">
                 <div class="js-burger"></div>
             </div>
@@ -116,6 +116,67 @@
             </div>
             <!-- END :: Expand Section -->
         </div>
+        <ul
+            class="d-md-none d-lg-none d-xl-none float-nav-list mobile-bottom-menu d-flex justify-content-between align-items-center position-fixed bottom-0 start-0 end-0">
+            <div class="search-float mb-0"><a href="#"><svg width="21" height="22" viewBox="0 0 21 22" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.37478 0.666504C4.28915 0.666504 0.166443 4.78922 0.166443 9.87484C0.166443 14.9604 4.28915 19.0832 9.37478 19.0832C11.5273 19.0832 13.5073 18.3447 15.0752 17.1072L19.0318 21.0638C19.4549 21.4869 20.1408 21.4869 20.5639 21.0638C20.9869 20.6408 20.9869 19.9548 20.5639 19.5318L16.6072 15.5751C17.8446 14.0072 18.5831 12.0272 18.5831 9.87484C18.5831 4.78922 14.4604 0.666504 9.37478 0.666504ZM2.33311 9.87484C2.33311 5.98583 5.48577 2.83317 9.37478 2.83317C13.2638 2.83317 16.4164 5.98583 16.4164 9.87484C16.4164 13.7639 13.2638 16.9165 9.37478 16.9165C5.48577 16.9165 2.33311 13.7639 2.33311 9.87484Z"
+                            fill="#B5BDC9" />
+                    </svg>
+                </a></div>
+            <li class="current">
+                <a href="#hero-area"><svg width="22" height="21" viewBox="0 0 22 21" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.66996 0.81163C10.4034 0.241123 11.4122 0.205467 12.1801 0.70466L12.3303 0.81163L21.4128 7.87572C22.1946 8.48389 21.8137 9.70849 20.8728 9.80949L20.7469 9.81614H19.6669V18.4828C19.6669 19.6251 18.7829 20.5608 17.6619 20.6435L17.5002 20.6495H4.50014C3.35791 20.6495 2.42212 19.7656 2.33941 18.6445L2.33347 18.4828V9.81614H1.2533C0.263817 9.81614 -0.189155 8.61626 0.492175 7.95832L0.587527 7.87572L9.66996 0.81163ZM11.0002 2.5219L4.09433 7.89308C4.3419 8.09369 4.50014 8.4002 4.50014 8.74365V18.4828H7.75014V13.0661C7.75014 11.2712 9.20522 9.81614 11.0002 9.81614C12.7951 9.81614 14.2502 11.2712 14.2502 13.0661V18.4828H17.5002V8.74365C17.5002 8.40018 17.6584 8.09368 17.9059 7.89308L11.0002 2.5219ZM11.0002 11.9828C10.4019 11.9828 9.91686 12.4678 9.91686 13.0661V18.4828H12.0835V13.0661C12.0835 12.4678 11.5984 11.9828 11.0002 11.9828Z"
+                            fill="#8491A5"></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#educator-area"><svg width="18" height="23" viewBox="0 0 18 23" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.4999 0.466309H2.49992C1.30825 0.466309 0.333252 1.44131 0.333252 2.63298V19.9663C0.333252 21.158 1.30825 22.133 2.49992 22.133H15.4999C16.6916 22.133 17.6666 21.158 17.6666 19.9663V2.63298C17.6666 1.44131 16.6916 0.466309 15.4999 0.466309ZM5.74992 2.63298H7.91658V8.04964L6.83325 7.23714L5.74992 8.04964V2.63298ZM15.4999 19.9663H2.49992V2.63298H3.58325V12.383L6.83325 9.94547L10.0833 12.383V2.63298H15.4999V19.9663Z"
+                            fill="#8491A5"></path>
+                    </svg>
+                </a>
+
+            </li>
+            <li><a href="#course-area">
+                    <svg width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M17.5833 2.94987H13.055C12.6 1.6932 11.4083 0.783203 10 0.783203C8.59167 0.783203 7.4 1.6932 6.945 2.94987H2.41667C1.225 2.94987 0.25 3.92487 0.25 5.11654V20.2832C0.25 21.4749 1.225 22.4499 2.41667 22.4499H17.5833C18.775 22.4499 19.75 21.4749 19.75 20.2832V5.11654C19.75 3.92487 18.775 2.94987 17.5833 2.94987ZM10 2.67904C10.2383 2.67904 10.4442 2.78737 10.5958 2.94987C10.7258 3.0907 10.8125 3.2857 10.8125 3.49154C10.8125 3.9357 10.4442 4.30404 10 4.30404C9.55583 4.30404 9.1875 3.9357 9.1875 3.49154C9.1875 3.2857 9.27417 3.0907 9.40417 2.94987C9.55583 2.78737 9.76167 2.67904 10 2.67904ZM17.5833 20.2832H2.41667V5.11654H17.5833V20.2832ZM10 6.19987C8.2125 6.19987 6.75 7.66237 6.75 9.44987C6.75 11.2374 8.2125 12.6999 10 12.6999C11.7875 12.6999 13.25 11.2374 13.25 9.44987C13.25 7.66237 11.7875 6.19987 10 6.19987ZM10 10.5332C9.40417 10.5332 8.91667 10.0457 8.91667 9.44987C8.91667 8.85404 9.40417 8.36654 10 8.36654C10.5958 8.36654 11.0833 8.85404 11.0833 9.44987C11.0833 10.0457 10.5958 10.5332 10 10.5332ZM3.5 17.5424V19.1999H16.5V17.5424C16.5 14.834 12.1992 13.664 10 13.664C7.80083 13.664 3.5 14.8232 3.5 17.5424ZM6.0025 17.0332C6.75 16.4265 8.58083 15.8199 10 15.8199C11.4192 15.8199 13.2608 16.4265 13.9975 17.0332H6.0025Z"
+                            fill="#8491A5"></path>
+                    </svg>
+                    <span class="tool-tip">Courses</span>
+                </a></li>
+            <li class="">
+                <a href="#institue-area"><svg width="21" height="22" viewBox="0 0 21 22" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5.04175 9.93262H2.87508V17.5159H5.04175V9.93262ZM11.5417 9.93262H9.37508V17.5159H11.5417V9.93262ZM20.7501 19.6826H0.166748V21.8493H20.7501V19.6826ZM18.0417 9.93262H15.8751V17.5159H18.0417V9.93262ZM10.4584 2.63095L16.1026 5.59928H4.81425L10.4584 2.63095ZM10.4584 0.182617L0.166748 5.59928V7.76595H20.7501V5.59928L10.4584 0.182617Z"
+                            fill="#8491A5"></path>
+                    </svg>
+
+                </a>
+            </li>
+            <li><a href="#"><svg width="20" height="22" viewBox="0 0 20 22" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.3333 0.449707C15.4756 0.449707 16.4113 1.33357 16.4941 2.45467L16.5 2.61637V8.03304H18.125C18.9696 8.03304 19.6638 8.67753 19.7426 9.50155L19.75 9.65804V17.783C19.75 19.5139 18.3971 20.9287 16.691 21.0275L16.5 21.033H2.41667C1.27444 21.033 0.338654 20.1492 0.255943 19.0281L0.25 18.8664V2.61637C0.25 1.47415 1.13387 0.538361 2.25497 0.45565L2.41667 0.449707H14.3333ZM17.5833 10.1997H16.5V18.8664C17.0983 18.8664 17.5833 18.3814 17.5833 17.783V10.1997ZM14.3333 2.61637H2.41667V18.8664H14.3333V2.61637ZM8.91667 11.283C9.51499 11.283 10 11.768 10 12.3664C10 12.922 9.5818 13.3798 9.04301 13.4424L8.91667 13.4497H5.66667C5.06836 13.4497 4.58333 12.9647 4.58333 12.3664C4.58333 11.8108 5.00155 11.3529 5.54033 11.2903L5.66667 11.283H8.91667ZM11.0833 5.86637C11.6817 5.86637 12.1667 6.3514 12.1667 6.94971C12.1667 7.54801 11.6817 8.03304 11.0833 8.03304H5.66667C5.06836 8.03304 4.58333 7.54801 4.58333 6.94971C4.58333 6.3514 5.06836 5.86637 5.66667 5.86637H11.0833Z"
+                            fill="#8491A5"></path>
+                    </svg>
+                </a></li>
+            <li><a href="#"><svg width="24" height="19" viewBox="0 0 24 19" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.2499 9.59928C17.6441 9.59928 19.5833 7.66012 19.5833 5.26595C19.5833 2.87178 17.6441 0.932617 15.2499 0.932617C12.8558 0.932617 10.9166 2.87178 10.9166 5.26595C10.9166 7.66012 12.8558 9.59928 15.2499 9.59928ZM15.2499 3.09928C16.4416 3.09928 17.4166 4.07428 17.4166 5.26595C17.4166 6.45762 16.4416 7.43262 15.2499 7.43262C14.0583 7.43262 13.0833 6.45762 13.0833 5.26595C13.0833 4.07428 14.0583 3.09928 15.2499 3.09928ZM15.2499 11.7659C12.3574 11.7659 6.58325 13.2176 6.58325 16.0993V18.2659H23.9166V16.0993C23.9166 13.2176 18.1424 11.7659 15.2499 11.7659ZM8.74992 16.0993C8.98825 15.3193 12.3358 13.9326 15.2499 13.9326C18.1749 13.9326 21.5333 15.3301 21.7499 16.0993H8.74992ZM5.49992 12.8493V9.59928H8.74992V7.43262H5.49992V4.18262H3.33325V7.43262H0.083252V9.59928H3.33325V12.8493H5.49992Z"
+                            fill="#8491A5"></path>
+                    </svg>
+                </a></li>
+        </ul>
 
         <header class="header-area">
             <div class="container cs-padding">
@@ -125,14 +186,14 @@
                     </div>
                     <div class="col-8">
                         <div class="header-right d-flex align-items-center justify-content-end">
-                            <a href="#" class="btn box-btn"><span><svg width="13" height="15" viewBox="0 0 13 15"
-                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <a href="#" class="btn box-btn gradient-bg"><span><svg width="13" height="15"
+                                        viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M6.16617 12.1667C6.16617 12.9 6.36617 13.58 6.70617 14.1667H1.4995C0.759502 14.1667 0.166168 13.5733 0.166168 12.8333V2.16668C0.166168 1.81305 0.306644 1.47392 0.556692 1.22387C0.806741 0.973819 1.14588 0.833344 1.4995 0.833344H2.16617V5.50001L3.83283 4.50001L5.4995 5.50001V0.833344H9.4995C9.85312 0.833344 10.1923 0.973819 10.4423 1.22387C10.6924 1.47392 10.8328 1.81305 10.8328 2.16668V8.22668C10.6128 8.19334 10.3928 8.16668 10.1662 8.16668C7.9595 8.16668 6.16617 9.96001 6.16617 12.1667ZM12.8328 12.1667L10.8328 10.1667V11.5H8.16617V12.8333H10.8328V14.1667L12.8328 12.1667Z"
                                             fill="#F0F3FA" />
                                     </svg>
                                 </span>Login</a>
-                            <a href="#" class="btn box-btn g-border-style"><span><svg width="13" height="15"
+                            <a href="#" class="btn box-btn gradient-bg g-border-style"><span><svg width="13" height="15"
                                         viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M10.426 6.65998L4.83268 12.2533V14.1666H1.49935C0.759349 14.1666 0.166016 13.5733 0.166016 12.8333V2.16665C0.166016 1.81302 0.306491 1.47389 0.55654 1.22384C0.806588 0.973789 1.14573 0.833313 1.49935 0.833313H2.16602V5.49998L3.83268 4.49998L5.49935 5.49998V0.833313H9.49935C9.85297 0.833313 10.1921 0.973789 10.4422 1.22384C10.6922 1.47389 10.8327 1.81302 10.8327 2.16665V6.36665C10.686 6.44665 10.546 6.53998 10.426 6.65998ZM6.16602 12.8066V14.1666H7.52602L11.6127 10.0866L10.2527 8.71998L6.16602 12.8066ZM12.7327 8.47998L11.8527 7.59998C11.7193 7.46665 11.4993 7.46665 11.3727 7.59998L10.7193 8.25331L12.0793 9.61331L12.7327 8.95998C12.866 8.83331 12.866 8.61331 12.7327 8.47998Z"
@@ -152,7 +213,7 @@
             </div>
         </header>
 
-        <main class="">
+        <main>
             <div class="section-cover" id="hero-area">
                 <div class="hero-area fix position-relative">
                     <img src="assets/img/g-1.svg" alt="" class="g-1 position-absolute">
@@ -173,7 +234,7 @@
                                 </p>
 
                                 <form action="#" class="search position-relative">
-                                    <button class="btn round-btn position-absolute">SEARCH</button>
+                                    <button class="btn box-btn fill-blue position-absolute">SEARCH</button>
                                     <input type="text" placeholder="What Do You Want To Learn ?">
                                     <ul class="suggetions position-absolute w-100 start-0 end-0">
                                         <li>Subject</li>
@@ -182,9 +243,7 @@
                                         <li>Subject</li>
                                         <li>Subject</li>
                                     </ul>
-
                                 </form>
-
                                 <div class="learners-wrap d-flex align-items-center">
                                     <div class="learners-faces d-flex align-items-center">
                                         <img src="assets/img/st-1.png" alt="">
@@ -212,33 +271,38 @@
                     </div>
                 </div> <!-- ./hero-area -->
             </div>
-            <div class="cta-area">
+            <div class="cta-area position-relative z-index-2">
                 <div class="container type-2 cs-padding">
                     <div class="cta-g-wrapper">
                         <h2>Book A Demo Class</h2>
-                        <div class="input-inside">
-                            <label for="fullname">Full Name</label>
-                            <input type="text" placeholder="John Smith" id="fullname">
-                        </div>
-                        <div class="input-inside tt">
-                            <label for="number">+91</label>
-                            <input type="text" placeholder="Mobile Number" id="number">
-                        </div>
-                        <div class="input-inside ttt">
-                            <label for="level-selection">Your Level</label>
+                        <fieldset>
+                            <legend>Full Name</legend>
+                            <input class="form-control" type="text" placeholder="John Smith" id="fullname">
+                        </fieldset>
+                        <fieldset>
+                            <legend>+91</legend>
+                            <input class="form-control" type="text" placeholder="Mobile Number" id="number">
+                        </fieldset>
+                        <fieldset class="z-index-1">
+                            <legend>Your Level</legend>
                             <select name="level-selection" id="level-selection" class="selection">
                                 <option value="highschool" selected>High School</option>
                                 <option value="">High School</option>
                                 <option value="">High School</option>
                                 <option value="">High School</option>
                             </select>
+                        </fieldset>
+                        <div class="action h-100 w-100">
+                            <a href="#"
+                                class="btn btn-medium_round d-flex align-items-center justify-content-center text-uppercase h-100 w-100"><span
+                                    class="g-color-one">BOOK
+                                    NOW</span></a>
                         </div>
-                        <a href="#" class="btn round-btn text-uppercase"><span class="g-color-one">BOOK NOW</span></a>
                     </div>
                 </div>
             </div> <!-- ./cta-area -->
 
-            <div class="section-cover" id="category-area">
+            <div class="section-cover fix" id="category-area">
                 <div class="category-area gray-bg position-relative">
                     <img src="assets/img/blocks-1.png" alt="" class="block-1 img-fluid position-absolute">
                     <img src="assets/img/blocks-2.png" alt="" class="block-2 img-fluid position-absolute">
@@ -431,21 +495,21 @@
                                 <span class="badge">NEW</span>
                                 <h5>Learn French In <br>
                                     20 Days</h5>
-                                <a href="#" class="btn box-btn small">View Course</a>
+                                <a href="#" class="btn box-btn fill-blue small">View Course</a>
                             </div>
 
                             <div class="course-blk yellow-bg">
                                 <span class="badge">NEW</span>
                                 <h5>Learn French In <br>
                                     20 Days</h5>
-                                <a href="#" class="btn box-btn small">View Course</a>
+                                <a href="#" class="btn box-btn fill-blue small">View Course</a>
                             </div>
                         </div> <!-- ./course-g-wrapper -->
                     </div>
                 </div> <!-- ./category-area -->
             </div>
 
-            <div class="section-cover" id="course-area">
+            <div class="section-cover fix" id="course-area">
                 <div class="course-area position-relative">
                     <img src="assets/img/slice-1.png" alt="" class="slice-1 position-absolute">
                     <div class="container cs-padding">
@@ -478,7 +542,7 @@
                             <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
                                 aria-labelledby="nav-home-tab">
                                 <div class="tb-content">
-                                    <div class="course-active adjust-margin right-overlay arw-design">
+                                    <div class="course-active gap-35 slider_shadow arw-design">
                                         <div class="course-item">
                                             <div class="card single-course">
                                                 <div class="thumb-part position-relative"
@@ -643,7 +707,7 @@
                                     </div>
 
 
-                                    <div class="course-active adjust-margin right-overlay arw-design">
+                                    <div class="course-active gap-35 slider_shadow arw-design">
                                         <div class="course-item">
                                             <div class="card single-course">
                                                 <div class="thumb-part position-relative"
@@ -829,6 +893,7 @@
                     </div>
                 </div> <!-- ./course-area -->
             </div>
+
             <div class="section-cover" id="step-area">
                 <div class="step-area gray-bg position-relative section">
                     <img src="assets/img/s-t-1.png" alt="" class="st-1 position-absolute start-0">
@@ -908,7 +973,7 @@
                 </div>
             </div> <!-- ./branding-area -->
 
-            <div class="learn-more-area position-relative section">
+            <div class="learn-more-area fix position-relative section">
                 <div class="container type-2 cs-padding z-index-1">
                     <div class="row">
                         <div class="col-lg-6">
@@ -941,7 +1006,7 @@
                 </div>
             </div> <!-- ./learn-more-area -->
 
-            <div class="section-cover" id="educator-area">
+            <div class="section-cover fix" id="educator-area">
                 <div class="educator-area gray-bg">
                     <div class="container cs-padding">
                         <div class="title-wrap">
@@ -954,7 +1019,7 @@
                             <a href="#" class="link_w_icon">View All Tutors<i class="far fa-arrow-right"></i></a>
                         </div>
                         <div class="minus-margin">
-                            <div class="educator-active adjust-margin-2 right-overlay type-2 arw-design">
+                            <div class="educator-active gap-35 slider_shadow gray arw-design">
                                 <div class="course-item">
                                     <div class="cmn-wrap educator">
                                         <div class="edu-left">
@@ -1116,9 +1181,7 @@
                 </div> <!-- ./educator-area -->
             </div>
 
-            <div class="section-cover" id="institue-area">
-
-
+            <div class="section-cover fix" id="institue-area">
                 <div class="institue-area gray-bg position-relative">
                     <img src="assets/img/wave-1.png" alt="" class="wave-1 position-absolute">
                     <img src="assets/img/wave-2.png" alt="" class="wave-2 position-absolute">
@@ -1155,8 +1218,8 @@
                                                 aspirants, the academy as an instrument assists them in acclimatizing
                                                 their
                                                 potentialities through systematic study coursework and guidance.</p>
-                                            <a href="#" class="btn box-btn"><span><svg width="13" height="15"
-                                                        viewBox="0 0 13 15" fill="none"
+                                            <a href="#" class="btn box-btn gradient-bg"><span><svg width="13"
+                                                        height="15" viewBox="0 0 13 15" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
                                                         <path
                                                             d="M6.16617 12.1667C6.16617 12.9 6.36617 13.58 6.70617 14.1667H1.4995C0.759502 14.1667 0.166168 13.5733 0.166168 12.8333V2.16668C0.166168 1.81305 0.306644 1.47392 0.556692 1.22387C0.806741 0.973819 1.14588 0.833344 1.4995 0.833344H2.16617V5.50001L3.83283 4.50001L5.4995 5.50001V0.833344H9.4995C9.85312 0.833344 10.1923 0.973819 10.4423 1.22387C10.6924 1.47392 10.8328 1.81305 10.8328 2.16668V8.22668C10.6128 8.19334 10.3928 8.16668 10.1662 8.16668C7.9595 8.16668 6.16617 9.96001 6.16617 12.1667ZM12.8328 12.1667L10.8328 10.1667V11.5H8.16617V12.8333H10.8328V14.1667L12.8328 12.1667Z"
@@ -1388,7 +1451,8 @@
                     </div>
                 </div> <!-- ./institute-area -->
             </div>
-            <div class="expert-area">
+
+            <div class="expert-area fix">
                 <div class="container cs-padding">
                     <div class="row align-items-center">
                         <div class="col-lg-4">
@@ -1487,7 +1551,7 @@
                 </div>
             </div> <!-- ./expert-area -->
 
-            <div class="choose-area">
+            <div class="choose-area fix">
                 <div class="container cs-padding">
                     <div class="choose-g-wrapper">
                         <div class="section-title">
@@ -1711,7 +1775,7 @@
                 </div>
             </div> <!-- ./faq-area -->
 
-            <div class="ins-area bg-white">
+            <div class="ins-area fix bg-white">
                 <div class="container type-2 cs-padding">
                     <div class="ins-row-type-one">
                         <div class="ins-el-box position-relative">
@@ -1834,7 +1898,6 @@
         </footer>
 
         <a href="#" class="back-to-top"><i class="fal fa-angle-up"></i></a>
-
     </div>
 
     <!-- Jquery Js  -->
@@ -1852,6 +1915,60 @@
     <script src="assets/js/jquery.nav.js"></script>
     <script src="assets/js/ResizeSensor.min.js"></script>
     <script src="assets/js/theia-sticky-sidebar.min.js"></script>
+
+    <script>
+        function detectDevice() {
+            let stickyElmentHeight = 0, margin = 0, viewPort = 0;
+            let mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+            if (!mobile) {
+                $('.step-g-wrapper').removeClass('regular-state');
+                viewPort = parseInt((window.innerHeight) / 2)
+                stickyElmentHeight = parseInt(document.getElementById('sticky-el').offsetHeight / 2);
+                margin = viewPort - stickyElmentHeight;
+                console.log(viewPort, stickyElmentHeight, margin)
+                $('.content, .sidebar').theiaStickySidebar({
+                    additionalMarginTop: margin
+                });
+            } else {
+                viewPort = parseInt((window.innerHeight))
+                stickyElmentHeight = parseInt(document.getElementById('sticky-el').offsetHeight);
+                margin = viewPort - stickyElmentHeight;
+                console.log(viewPort, stickyElmentHeight, margin)
+                $('.step-g-wrapper').addClass('regular-state');
+                $('.sidebar').css('top', margin);
+            }
+        }
+
+
+        // Query For make sticky mobile image in step-area 
+
+        // Query for step-content observing 
+        const stepArea = document.getElementById('step-area');
+        const stepContent = document.querySelectorAll('.step-content');
+        const changeAbleImage = document.querySelector('.step-img img');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(each => {
+                if (each.isIntersecting) {
+                    let src = each.target.getAttribute('data-step');
+                    changeAbleImage.src = src;
+                }
+
+            })
+
+        }, {
+            threshold: 1
+        })
+        stepContent.forEach(each => {
+            observer.observe(each)
+        });
+
+        let events = ['load', 'resize'];
+        events.forEach(event => {
+            window.addEventListener(event, function () {
+                detectDevice()
+            })
+        })
+    </script>
 
     <!-- Main Js -->
     <script src="assets/js/main.js"></script>
