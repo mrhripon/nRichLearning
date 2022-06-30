@@ -313,9 +313,6 @@ ol {
   }
 }
 
-
-
-
 .arw-design .slick-arrow {
   position: absolute;
   right: 0;
@@ -331,6 +328,7 @@ ol {
   height: 40px;
   border: 0;
   border-radius: 50%;
+  transition: .6s;
 }
 
 .arw-design .slick-prev.slick-arrow {
@@ -616,6 +614,7 @@ ol {
   transition: .3s;
   opacity: 0;
   visibility: hidden;
+  white-space: nowrap;
 }
 
 .tool-tip::after {
@@ -2482,8 +2481,9 @@ fieldset .nice-select {
 14.[educatorArea]
  educatorArea Css Start  
  ==============================*/
-.educator-area {
+.institue-pge .educator-area {
   padding: 80px 0;
+  padding-top: 0;
 }
 
 .educator-area.pb-40 {
@@ -3753,6 +3753,7 @@ fieldset.type-2 .nice-select.selection {
 
 .institue-page-area {
   padding-top: 110px;
+  padding-bottom: 30px;
 }
 
 .institue-page-area .cta-fm {
@@ -3826,6 +3827,13 @@ fieldset.type-2 .nice-select.selection {
   margin: 0;
 }
 
+.institue-pge .title-wrap {
+  margin-bottom: 34px;
+}
+
+.institue-pge .teachers-course-area .title-wrap {
+  margin-bottom: 10px;
+}
 
 @media screen and (max-width: 1199px) {
   .institue-page-area .ex-thumb img {

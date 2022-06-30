@@ -28,6 +28,20 @@ $(document).ready(function () {
         slick.target.classList.add('right_shadow_active');
     })
 
+    $('.course-active, .educator-active, .institue-slider, .review-active').on('afterChange', function (slick, currentSlide, nextSlide) {
+        if (!currentSlide.$slides[currentSlide.$slides.length - 1].classList.contains('slick-active')) {
+            $(this).addClass('right_shadow_active');
+        } else {
+            $(this).removeClass('right_shadow_active');
+        }
+
+        if (!currentSlide.$slides[0].classList.contains('slick-active')) {
+            $(this).addClass('left_shadow_active');
+        } else {
+            $(this).removeClass('left_shadow_active');
+        }
+    })
+
     // Slick Activation for Course-area 
     $('.course-active').slick({
         infinite: false,
@@ -63,7 +77,6 @@ $(document).ready(function () {
             // instead of a settings object
         ]
     });
-
 
     // Slick Activation for educator-area
     $('.educator-active').slick({
@@ -149,6 +162,8 @@ $(document).ready(function () {
         // nextArrow: '<button type="button" class="slick-next"><i class="fal fa-chevron-circle-right"></i></button>',
         // prevArrow: '<button type="button" class="slick-prev"><i class="fal fa-chevron-circle-left"></i></button>'
     });
+
+
 
 
     // Slick Activation for expert-area
