@@ -2352,7 +2352,7 @@ fieldset .nice-select {
 
 .educator-active.gap-35 {
   margin-left: -36px;
-  margin-right: -36px;
+  margin-right: 0;
 }
 
 .educator-active.gap-35 .slick-slide {
