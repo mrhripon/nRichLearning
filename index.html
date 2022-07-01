@@ -995,45 +995,56 @@
                         </div>
 
                         <div class="step-g-wrapper" id="step">
-                            <div class="content">
-                                <div class="step-content-outer-box">
+                            <ul class="step-left">
+                                <li>
                                     <div class="step-content" data-step="assets/img/m-1.png" id="step-1">
-                                        <span class="num">01</span>
-                                        <h4>New Way Of Online Teaching</h4>
-                                        <p>Take the first step by Signing Up. <br>
-                                            Start by creating your first courses <br>
-                                            Schedule Your class <br>
-                                            Secure Your Content <br>
-                                            Add quizzes, Assignments and Notes <br>
-                                            Get your Personalized Profile</p>
+                                        <h4 class="position-relative"><span class="num position-absolute">01</span><span
+                                                class="dot position-absolute"></span>New Way
+                                            Of Online Teaching</h4>
+                                        <ul class="stp-list">
+                                            <li>Take the first step by Signing Up.</li>
+                                            <li>Start by creating your first courses</li>
+                                            <li>Schedule Your class</li>
+                                            <li>Secure Your Content</li>
+                                            <li>Add quizzes, Assignments and Notes</li>
+                                            <li>Get your Personalized Profile</li>
+                                        </ul>
                                     </div>
+                                </li>
 
-                                    <div class="step-content" data-step="assets/img/m-1.png" id="step-2">
-                                        <span class="num">02</span>
-                                        <h4>Explore the world of Knowledge</h4>
-                                        <p>Live Classes with top tutors <br>
-                                            Digital Library for extra knowledge <br>
-                                            Live Doubt Classes <br>
-                                            Two Way interaction <br>
-                                            Social Connect for Sharing Notes, Lectures.</p>
+                                <li>
+                                    <div class="step-content" data-step="assets/img/m-2.png" id="step-2">
+                                        <h4 class="position-relative"><span class="num position-absolute">02</span><span
+                                                class="dot position-absolute"></span>Explore
+                                            the world of Knowledge</h4>
+                                        <ul class="stp-list">
+                                            <li>Live Classes with top tutors</li>
+                                            <li>Digital Library for extra knowledge</li>
+                                            <li>Live Doubt Classes</li>
+                                            <li>Two Way interaction</li>
+                                            <li>Social Connect for Sharing Notes, Lectures.</li>
+                                        </ul>
                                     </div>
+                                </li>
 
+                                <li>
                                     <div class="step-content" data-step="assets/img/m-1.png" id="step-3">
-                                        <span class="num">03</span>
-                                        <h4>Create Your Account From Portal</h4>
-                                        <p>Upload Unlimited Courses <br>
-                                            Get Access to webinars <br>
-                                            Teach with Premium LMS Features <br>
-                                            Record and Sell Lectures <br>
-                                            Get Marketing Kits</p>
+                                        <h4 class="position-relative"><span class="num position-absolute">03</span><span
+                                                class="dot position-absolute"></span>Create
+                                            Your Account From Portal</h4>
+                                        <ul class="stp-list">
+                                            <li>Upload Unlimited Courses</li>
+                                            <li>Get Access to webinars</li>
+                                            <li>Teach with Premium LMS Features</li>
+                                            <li>Record and Sell Lectures</li>
+                                            <li>Get Marketing Kits</li>
+                                        </ul>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="sidebar">
-                                <div class="sticky-content">
-                                    <div class="step-img text-end" id="sticky-el">
-                                        <img class="img-fluid" src="assets/img/m-1.png" alt="">
-                                    </div>
+                                </li>
+                            </ul>
+                            <div class="step-right">
+                                <div class="step-img text-end">
+                                    <img class="img-fluid" src="assets/img/m-1.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -1041,8 +1052,8 @@
                 </div> <!-- ./step-area -->
             </div>
 
-            <div class="branding-area fix position-relative">
-                <img src="assets/img/g-1.svg" alt="" class="g-1 position-absolute">
+            <div class="branding-area position-relative">
+                <img src="assets/img/qq.svg" alt="" class="qq end-0 top-0 position-absolute">
                 <img src="assets/img/g-2.svg" alt="" class="g-2 position-absolute">
                 <div class="container cs-padding z-index-1">
                     <div class="brand-content position-relative">
@@ -2004,36 +2015,8 @@
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/jquery.nav.js"></script>
-    <script src="assets/js/ResizeSensor.min.js"></script>
-    <script src="assets/js/theia-sticky-sidebar.min.js"></script>
 
     <script>
-        function getSmallDevice() {
-            return window.matchMedia('(max-width: 767px)').matches;
-        }
-        function detectDevice() {
-            let stickyElmentHeight = 0, margin = 0, viewPort = 0;
-            let isSmallDevice = getSmallDevice();
-            if (!isSmallDevice) {
-                $('.step-g-wrapper').removeClass('regular-state');
-                viewPort = parseInt((window.innerHeight) / 2)
-                stickyElmentHeight = parseInt(document.getElementById('sticky-el').offsetHeight / 2);
-                margin = viewPort - stickyElmentHeight;
-                $('.content, .sidebar').theiaStickySidebar({
-                    additionalMarginTop: margin
-                });
-            } else {
-                viewPort = parseInt((window.innerHeight))
-                stickyElmentHeight = parseInt(document.getElementById('sticky-el').offsetHeight);
-                margin = (viewPort - stickyElmentHeight) - 56;
-                $('.step-g-wrapper').addClass('regular-state');
-                $('.sidebar').css('top', margin);
-            }
-        }
-
-
-        // Query For make sticky mobile image in step-area 
-
         // Query for step-content observing 
         const stepArea = document.getElementById('step-area');
         const stepContent = document.querySelectorAll('.step-content');
@@ -2053,13 +2036,6 @@
         stepContent.forEach(each => {
             observer.observe(each)
         });
-
-        let events = ['load', 'resize'];
-        events.forEach(event => {
-            window.addEventListener(event, function () {
-                detectDevice()
-            })
-        })
     </script>
 
     <!-- Main Js -->

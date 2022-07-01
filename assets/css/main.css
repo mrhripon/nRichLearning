@@ -2136,59 +2136,80 @@ fieldset .nice-select {
  stepArea Css Start  
  ==============================*/
 .step-area {
-  -webkit-transition: .4s;
-  -o-transition: .4s;
-  transition: .4s;
+  padding-top: 345px;
 }
 
-.step-area::after {
-  background: -o-linear-gradient(355.62deg, #008CE4 -1.08%, #00AF9E 96.88%);
-  background: linear-gradient(94.38deg, #008CE4 -1.08%, #00AF9E 96.88%);
-  width: 100%;
-  height: 100%;
+.step-area .section-title {
+  transform: translateY(-265px);
+}
+
+.step-left {
+  margin-top: -180px;
+}
+
+.step-left>li {
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 80vh;
+}
+
+.step-left>li:last-child {
+  padding-bottom: 40vh;
+}
+
+.step-left>li::before {
   content: "";
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(94.38deg, #008CE4 -1.08%, #00AF9E 96.88%);
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  -webkit-transition: .4s;
-  -o-transition: .4s;
-  transition: .4s;
-  z-index: 0;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.change-bg .step-area::after {
-  opacity: 1;
-  visibility: visible;
 }
 
 .step-content .num {
-  font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
-  font-size: 72px;
+  font-size: 64px;
   line-height: 1;
   color: #7A7A7A;
   opacity: 0.6;
   margin-bottom: 15px;
+  left: -115px;
+  top: 0;
 }
 
 .step-content h4 {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
-  font-size: 30px;
-  margin-bottom: 15px;
+  font-size: 28px;
+  margin-bottom: 13px;
 }
 
-.step-content p {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 19px;
-  color: #7A7A7A;
+.step-content h4 .dot {
+  width: 15px;
+  height: 15px;
+  left: -27px;
+  display: inline-block;
+  border-radius: 50%;
+  background: linear-gradient(94.38deg, #008CE4 -1.08%, #00AF9E 96.88%);
+  top: 9px;
+}
+
+.stp-list {
+  margin-left: 15px;
+}
+
+.stp-list li {
+  font-family: Poppins;
+  font-weight: normal;
+  font-size: 16px;
+  list-style: square;
+}
+
+.stp-list li:not(:last-child) {
+  margin-bottom: 5px;
 }
 
 .step-content {
@@ -2200,23 +2221,10 @@ fieldset .nice-select {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 445px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-.cs-rw {
-  padding: 60px 0;
-}
-
-.reverse .step-content {
-  margin-left: 100px;
-}
-
-.step-area {
-  padding-top: 80px;
-  padding-bottom: 30px;
+  padding: 20px 0;
 }
 
 .st-1 {
@@ -2228,28 +2236,18 @@ fieldset .nice-select {
   top: calc(100% - 7px);
 }
 
-.step-content-outer-box .step-content {
-  margin-bottom: 410px;
-}
-
-.step-content-outer-box .step-content:last-child {
-  margin-bottom: 200px;
-}
-
 .step-g-wrapper {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 50px 1fr;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 50px;
+  align-items: flex-start;
 }
 
 .step-img img {
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
-  max-width: 420px;
-  width: 100%;
+  max-width: 100%;
+  max-height: 60vh;
 }
 
 .change-bg #step-2 p,
@@ -2279,6 +2277,12 @@ fieldset .nice-select {
   background-color: #F6F8FF;
 }
 
+.step-right {
+  position: sticky;
+  top: calc(50% + 40px);
+  transform: translateY(-50%);
+}
+
 /* Media Query Start */
 @media screen and (max-width: 767px) {
   .step-g-wrapper {
@@ -2302,12 +2306,54 @@ fieldset .nice-select {
 
   .step-img img {
     max-width: 100%;
-    height: 40vh;
+    height: 35vh;
     max-height: 100%;
   }
 
-  .step-content-outer-box .step-content:last-child {
-    margin-bottom: 230px;
+  .step-right {
+    position: sticky;
+    top: calc(100% - (35vh + 65px));
+    transform: translateY(0%);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .step-area {
+    padding-top: 55px;
+  }
+
+  .step-area .section-title {
+    transform: translateY(0px);
+    margin-bottom: 0;
+  }
+
+  .step-left {
+    margin-top: -215px;
+  }
+
+  .step-right::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #F6F8FF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  .step-content .num {
+    font-size: 48px;
+    margin-bottom: 10px;
+    left: -2px;
+    top: -55px;
+  }
+
+  .step-left>li::before {
+    height: calc(100% + 30px);
+    top: -30px;
   }
 }
 
@@ -2323,8 +2369,17 @@ fieldset .nice-select {
  brandingArea Css Start  
  ==============================*/
 .branding-area {
-  padding: 65px 0;
   padding-bottom: 70px;
+}
+
+.branding-area::after {
+  content: "";
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  position: absolute;
+  top: -65px;
+  z-index: 1;
 }
 
 .brand-content {
@@ -2361,6 +2416,21 @@ fieldset .nice-select {
   bottom: 3px;
   left: -80px;
   width: 48px;
+}
+
+
+@media screen and (max-width: 767px) {
+  .branding-area::after {
+    content: none;
+  }
+
+  .sq-2 {
+    display: none;
+  }
+
+  .qq {
+    width: 36px;
+  }
 }
 
 /*=============================

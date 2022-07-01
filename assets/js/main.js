@@ -181,10 +181,6 @@ $(document).ready(function () {
     // Activation Nice-Select for Dropdown 
     $('.selection').niceSelect();
 
-
-
-
-
     // Query for Dragable Hamburger Menu 
     const fabElement = document.getElementById("floating-snap-btn-wrapper");
     const burger = document.querySelector('.js-burger');
@@ -195,8 +191,6 @@ $(document).ready(function () {
 
         let dropDiv = fabElement.querySelector('.float-nav-list-wrap').getBoundingClientRect();
         let triggerPosition = fabElement.querySelector('.fab-btn').getBoundingClientRect();
-        console.log(dropDiv.height)
-        console.log(triggerPosition.top)
         if (triggerPosition.top < dropDiv.height) {
             $(fabElement.querySelector('.float-nav-list-wrap')).css({
                 'bottom': 'auto',

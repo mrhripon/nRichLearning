@@ -477,11 +477,6 @@
         top: -37px;
     }
 
-    .step-area {
-        padding-top: 55px;
-        padding-bottom: 30px;
-    }
-
     .step-content h4 {
         font-size: 20px;
         margin-bottom: 10px;
@@ -489,11 +484,6 @@
 
     .step-content p {
         font-size: 15px;
-    }
-
-    .step-content .num {
-        font-size: 55px;
-        margin-bottom: 10px;
     }
 
     .cs-rw {
