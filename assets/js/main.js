@@ -24,11 +24,11 @@ $(document).ready(function () {
     // one page floating nav activation 
     $('.float-nav-list').onePageNav()
 
-    $('.course-active, .educator-active, .institue-active').on('init', function (slick) {
+    $('.course-active, .educator-active, .institue-active, .catalog-left-slider, .cat-type-slider').on('init', function (slick) {
         slick.target.classList.add('right_shadow_active');
     })
 
-    $('.course-active, .educator-active, .institue-slider, .review-active').on('afterChange', function (slick, currentSlide, nextSlide) {
+    $('.course-active, .educator-active, .institue-slider, .review-active, .catalog-left-slider, .cat-type-slider').on('afterChange', function (slick, currentSlide, nextSlide) {
         if (!currentSlide.$slides[currentSlide.$slides.length - 1].classList.contains('slick-active')) {
             $(this).addClass('right_shadow_active');
         } else {
@@ -319,6 +319,34 @@ $(document).ready(function () {
         autoplay: true,
         vertical: true
     });
+
+
+    // Slick Activation for institue-area
+    $('.catalog-left-slider').slick({
+        infinite: false,
+        speed: 800,
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        vertical: true,
+        nextArrow: '<button type="button" class="slick-next"><i class="far fa-angle-down"></i></button>',
+        prevArrow: '<button type="button" class="slick-prev"><i class="far fa-angle-up"></i></button>'
+    });
+
+
+
+    // Slick Activation cat-type-slider
+    $('.cat-type-slider').slick({
+        infinite: false,
+        speed: 800,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        vertical: true,
+        nextArrow: '<button type="button" class="slick-next"><i class="far fa-angle-down"></i></button>',
+        prevArrow: '<button type="button" class="slick-prev"><i class="far fa-angle-up"></i></button>'
+    });
+
+
+
 }); //jQuery End 
 
 
