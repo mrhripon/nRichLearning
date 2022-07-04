@@ -34,6 +34,10 @@
 /* 1. Product-page css, Search='[productPage]' */
 
 
+/* Course Selection Page */
+/* Search='[courseSelection]' */
+
+
 
 /*=======================
 1.[BASE]
@@ -1690,7 +1694,9 @@ fieldset .nice-select {
   z-index: 0;
 }
 
-.category-item:hover:after {
+.category-item:hover:after,
+
+.category-item.current:after {
   opacity: 1;
   visibility: visible;
   top: 0;
@@ -1749,16 +1755,20 @@ fieldset .nice-select {
   transition: .3s;
 }
 
-.category-item:hover .category-item-nr {
+.category-item:hover .category-item-nr,
+.category-item.current .category-item-nr {
   border-color: transparent;
 }
 
 .category-item:hover .cat-content h6,
-.category-item:hover .cat-content p {
+.category-item.current .cat-content h6,
+.category-item:hover .cat-content p,
+.category-item.current .cat-content p {
   color: #fff;
 }
 
-.category-item:hover .cat-icon svg .svg-main-thread {
+.category-item:hover .cat-icon svg .svg-main-thread,
+.category-item.current .cat-icon svg .svg-main-thread {
   fill: #fff;
 }
 
@@ -4435,99 +4445,97 @@ fieldset.type-2 .nice-select.selection {
 
 
 /*=============================
-1.[courseListing]
- courseListing Css Start  
+1.[courseSelection]
+ courseSelection Css Start  
  ==============================*/
 .catalog-all-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: first baseline;
-}
-
-.catalog-left-slider {
-  flex: 0 0 310px;
-  max-width: 310px;
-}
-
-.catalog-right-all {
-  flex: 0 0 calc(100% - 340px);
-  margin-left: 30px;
-  padding-left: 30px;
-  border-left: 0.914077px solid rgba(0, 0, 0, 0.2);
-}
-
-.single-cat-type {
   display: grid;
-  grid-template-columns: 260px auto;
-  background: #FFFFFF;
-  box-shadow: 12.6275px 12.6275px 18.0392px rgba(0, 0, 0, 0.06);
-  border-radius: 4px;
-  padding: 20px;
-  align-items: flex-start;
+  grid-template-columns: 300px auto;
   grid-gap: 20px;
 }
 
-.instructor-short-info {
-  display: grid;
-  grid-template-columns: 60px auto;
-  grid-gap: 12px;
+.catalog-left-slider {
+  flex: 0 0 300px;
+  max-width: 300px;
 }
 
-.instructor-in-g-wrapper {
+.all-classes-g-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 15px;
-  margin-top: 12px;
+  grid-gap: 40px;
 }
 
-.hightlight-list.plc-10 li p {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-  text-align: right;
-  flex-wrap: wrap;
-}
-
-.instructor-short-info .rt img {
-  max-width: 74px;
-  margin-right: 4px;
-}
-
-.instructor-short-info .rt {
+.class-thumb {
+  background: #B7D8F5;
+  border-radius: 11px;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
-  font-weight: 400;
-  font-size: 8.40685px;
-  font-family: Poppins;
-  color: #7A7A7A;
-  margin-top: 8px;
-}
-
-.single-cat-type .video {
-  height: 190px;
-}
-
-.single-cat-type .video .v-bg {
-  height: 100%;
-  object-fit: cover;
-}
-
-.class-writter-info h6 {
-  font-size: 16px;
+  justify-content: center;
   font-weight: 700;
-  color: #1F1F1F;
+  font-size: 18px;
+  color: #000;
+}
+
+.single-class {
+  display: grid;
+  grid-template-columns: 80px auto;
+  grid-gap: 15px;
+  align-items: center;
+}
+
+.all-classes {
+  padding-left: 20px;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  height: 100%;
+}
+
+.class-intro-content h6 {
+  font-weight: 700;
+  font-size: 18px;
+  color: #000;
   margin-bottom: 5px;
 }
 
-.class-writter-info p {
+.class-intro-content p {
   font-weight: 400;
-  font-size: 12px;
-  color: #7A7A7A;
+  font-size: 14px;
+  color: #000;
+}
+
+.newsletter-input.global-search input {
+  border: 1.1883px solid #D5DBE2;
+  border-radius: 4.7532px;
+  height: 54px;
+  color: #A6AEBC;
+}
+
+.course-listing-area {
+  padding-bottom: 80px;
+}
+
+.newsletter-input.global-search button i {
+  color: #8C95A5;
+}
+
+input.gray-bg::placeholder {
+  color: #A6AEBC;
+  opacity: 1;
 }
 
 /* Media Query */
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+  .catalog-left-slider.slick-vertical {
+    margin: 0;
+    margin-top: -8px;
+  }
+
+  .catalog-left-slider.slick-vertical .slick-slide {
+    margin: 8px 0;
+  }
+}
 
 /*=============================
- courseListing Css End  
+ courseSelection Css End  
  ==============================*/
