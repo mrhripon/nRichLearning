@@ -988,63 +988,42 @@
                 <div class="step-area gray-bg position-relative section">
                     <img src="assets/img/s-t-1.png" alt="" class="st-1 position-absolute start-0">
                     <div class="container cs-padding z-index-1">
-                        <div class="section-title">
-                            <h2>Access Courses<br>
+                        <div class="section-title text-center">
+                            <h2>Access Courses
                                 <span class="title-pole sign position-relative">In 3 Step Process </span>
                             </h2>
                         </div>
-
-                        <div class="step-g-wrapper" id="step">
-                            <ul class="step-left">
-                                <li>
-                                    <div class="step-content" data-step="assets/img/m-1.png" id="step-1">
-                                        <h4 class="position-relative"><span class="num position-absolute">01</span><span
-                                                class="dot position-absolute"></span>New Way
-                                            Of Online Teaching</h4>
-                                        <ul class="stp-list">
-                                            <li>Take the first step by Signing Up.</li>
-                                            <li>Start by creating your first courses</li>
-                                            <li>Schedule Your class</li>
-                                            <li>Secure Your Content</li>
-                                            <li>Add quizzes, Assignments and Notes</li>
-                                            <li>Get your Personalized Profile</li>
-                                        </ul>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="step-content" data-step="assets/img/m-2.png" id="step-2">
-                                        <h4 class="position-relative"><span class="num position-absolute">02</span><span
-                                                class="dot position-absolute"></span>Explore
-                                            the world of Knowledge</h4>
-                                        <ul class="stp-list">
-                                            <li>Live Classes with top tutors</li>
-                                            <li>Digital Library for extra knowledge</li>
-                                            <li>Live Doubt Classes</li>
-                                            <li>Two Way interaction</li>
-                                            <li>Social Connect for Sharing Notes, Lectures.</li>
-                                        </ul>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="step-content" data-step="assets/img/m-1.png" id="step-3">
-                                        <h4 class="position-relative"><span class="num position-absolute">03</span><span
-                                                class="dot position-absolute"></span>Create
-                                            Your Account From Portal</h4>
-                                        <ul class="stp-list">
-                                            <li>Upload Unlimited Courses</li>
-                                            <li>Get Access to webinars</li>
-                                            <li>Teach with Premium LMS Features</li>
-                                            <li>Record and Sell Lectures</li>
-                                            <li>Get Marketing Kits</li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
+                        <div class="step-g-wrapper">
+                            <div class="step-left">
+                                <img src="assets/img/frame.png" class="img-fluid" alt="">
+                            </div>
                             <div class="step-right">
-                                <div class="step-img text-end">
-                                    <img class="img-fluid" src="assets/img/m-1.png" alt="">
+                                <div class="single-step">
+                                    <div class="numbering"><img src="assets/img/1.png" alt="" class="img-fluid"></div>
+                                    <div class="content">
+                                        <h5>New Way Of Online Teaching</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium modi
+                                            assu
+                                            menda beatae provident. Laudantium modi assumenda beatae provident.</p>
+                                    </div>
+                                </div>
+                                <div class="single-step">
+                                    <div class="numbering"><img src="assets/img/2.png" alt="" class="img-fluid"></div>
+                                    <div class="content">
+                                        <h5>Explore the world of Knowledge</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium modi
+                                            assu
+                                            menda beatae provident. Laudantium modi assumenda beatae provident.</p>
+                                    </div>
+                                </div>
+                                <div class="single-step">
+                                    <div class="numbering"><img src="assets/img/3.png" alt="" class="img-fluid"></div>
+                                    <div class="content">
+                                        <h5>Create Your Account From Portal</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium modi
+                                            assu
+                                            menda beatae provident. Laudantium modi assumenda beatae provident.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -2015,28 +1994,6 @@
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/jquery.nav.js"></script>
-
-    <script>
-        // Query for step-content observing 
-        const stepArea = document.getElementById('step-area');
-        const stepContent = document.querySelectorAll('.step-content');
-        const changeAbleImage = document.querySelector('.step-img img');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(each => {
-                if (each.isIntersecting) {
-                    let src = each.target.getAttribute('data-step');
-                    changeAbleImage.src = src;
-                }
-
-            })
-
-        }, {
-            threshold: 1
-        })
-        stepContent.forEach(each => {
-            observer.observe(each)
-        });
-    </script>
 
     <!-- Main Js -->
     <script src="assets/js/main.js"></script>
