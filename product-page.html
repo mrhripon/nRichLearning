@@ -44,8 +44,37 @@
 
 <body>
 
-    <div class="all" id="main-wrapper">
 
+
+
+    <!--Batch Details Modal Markup Start -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog batchDetails">
+            <div class="modal-content">
+                <div class="modal-header d-flex align-items-center justify-content-between">
+                    <h5 class="secondary-title gradient-bg">Batch Details</h5>
+                    <button type="button" class="close-m" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="fal fa-times"></i></button>
+                </div>
+                <div class="modal-body p-0 m-0">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            Details
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="calander-wrapper">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Batch Details Modal Markup End -->
+
+
+    <div class="all" id="main-wrapper">
         <!-- Floating Nav Markup Start -->
         <div id="floating-snap-btn-wrapper" class="d-none d-md-block">
             <div class="fab-btn">
@@ -224,7 +253,7 @@
             </div>
         </header>
 
-        <main>
+        <main class="fix">
             <div class="teachers-area product-pge gray-bg position-relative fix">
                 <img src="assets/img/gg-3.png" alt="" class="gg-3 position-absolute">
                 <div class="container cs-padding">
@@ -925,6 +954,8 @@
                 </div>
             </div> <!-- ./ins-area -->
         </main>
+
+
 
         <footer class="footer-area">
             <div class="container cs-padding">

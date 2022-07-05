@@ -329,7 +329,30 @@ $(document).ready(function () {
         slidesToScroll: 1,
         vertical: true,
         nextArrow: '<button type="button" class="slick-next"><i class="far fa-angle-down"></i></button>',
-        prevArrow: '<button type="button" class="slick-prev"><i class="far fa-angle-up"></i></button>'
+        prevArrow: '<button type="button" class="slick-prev"><i class="far fa-angle-up"></i></button>',
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    vertical: false,
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    vertical: false,
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    vertical: false,
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
 
